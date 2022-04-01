@@ -1,0 +1,31 @@
+<div class="mainBlock">
+    <div class="dataTable">
+        <div class="header">
+          <div class="search">
+            <input type="text" [(ngModel)]="searchString" (ngModelChange)="search()" placeholder="Search">
+            <img src="/assets/images/icons/search_black_24dp.svg" alt="">
+          </div>
+          <img src="/assets/images/icons/more_vert_black_24dp.svg" alt="">
+        </div>
+        <table *ngIf="columns.length" mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
+            <ng-container matColumnDef="{{col.column}}" *ngFor="let col of columns">.
+              <th mat-header-cell *matHeaderCellDef>{{col.displayName}}</th>
+              <td mat-cell *matCellDef="let element" class="companyName">
+                <span>{{ getValue(element,col.column) }}</span>
+              </td>
+            </ng-container>
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+        </table>
+        <mat-paginator [length]="totalRecords"
+              [pageSize]="page.limit"
+              [pageSizeOptions]="[4,8,12]"
+              aria-label="Select page"
+              (page)="paginator($event)"
+          >
+        </mat-paginator>      
+    </div>
+    <div class="selectionMenu">
+        <app-side-bar (dispCols)="setDisplayedCols($event)" (cols)="setCols($event)"></app-side-bar>
+    </div>
+</div>

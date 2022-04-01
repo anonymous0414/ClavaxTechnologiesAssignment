@@ -1,0 +1,28 @@
+<div class="menuBlock">
+    <header>
+        <h2>Table</h2>
+        <img src="/assets/images/icons/chevron_right_black_24dp.svg" alt="">
+    </header>
+    <div class="menu">
+        <div class="menuItem container" *ngFor="let menuItem of menu;let i=index">
+            <!-- <input type="checkbox" class="subMenuCheckbox" id="{{'menu'+i}}"  /> -->
+            <!-- <label class="container subMenuCheckbox"> -->
+                <!-- <input type="checkbox" checked="checked"> -->
+                <input type="checkbox" class=" ip subMenuCheckbox" id="{{'menu'+i}}" [checked]="i==0?true:false"  />
+                <span class="checkmark subMenuCheckbox"></span>
+            <!-- </label> -->
+            <img src="/assets/images/icons/arrow_right_black_24dp.svg" (click)="clickElem('menu'+i)" class="close" alt="">
+            <img src="/assets/images/icons/arrow_drop_down_black_24dp.svg" (click)="clickElem('menu'+i)" class="open" alt="">
+            
+            <label for="{{'menu'+i}}">{{menuItem?.displayName}}</label>
+            <div id="{{'submenuItem'+i}}"class="links">
+                <div class="linkItem" *ngFor="let subMenuItem of menuItem?.fields | filter: {isVisible: true}">
+                    <span>
+                        <input type="checkbox" class="subMenuCheckbox" [(ngModel)]="subMenuItem.checked" (ngModelChange)="checkSelected()" id="{{'menu'+i}}" />    
+                        {{subMenuItem?.displayName}}
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,53 @@
+
+.mainBlock{
+    display: flex;
+    justify-content: space-between;
+    background-color: #fafafa;
+    height: 100vh;
+    padding: 22px 18px;
+    .header{
+        background-color: #003057;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 22px;
+        .search{
+            position: relative;
+            input{
+                height: 48px;
+                border-radius: 24px;
+                border: 0;
+                padding-left: 38px;
+                width: 320px;
+                &:focus{
+                    outline: none;
+                }
+            }
+            img{
+                position: absolute;
+                left: 9px;
+                top: 13px;
+            }
+        }
+        img{
+            cursor: pointer;
+            height: 28px;
+        }
+    }
+    .dataTable{
+        width: 76%;
+        table{
+            width: 100%;
+            .mat-header-cell{
+                background-color: #003057;
+                color: #fff;
+            }
+            .mat-header-cell,.mat-cell{
+                text-align: center;
+            }
+        }
+    }
+    .selectionMenu{
+        width: 22%;
+    }
+}

@@ -1,0 +1,148 @@
+[
+{
+    "name": "BaChangeTransactions",
+	"id": "86e5968c-8548-4011-91fd-d64b774b5151",
+    "displayName": "Change Transaction Report",
+    "isVisible": true,
+    "fields": [
+        {
+            "displayName": "Machine Number",
+            "column": "content.machineInformation.machineNumber",
+            "datatype": "Text",
+            "isVisible": true,
+            "checked": true
+        },
+        {
+            "displayName": "Serial Number",
+            "column": "content.machineInformation.serialNumber",
+            "datatype": "Text",
+            "isVisible": true,
+            "checked": true
+        },
+        {
+            "displayName": "Machine Type",
+            "column": "content.machineInformation.machineType",
+            "datatype": "Text",
+            "isVisible": true,
+            "checked": true
+        },
+        {
+            "displayName": "DateTime",
+            "column": "content.data.transactionDateTime",
+            "datatype": "dateTime",
+            "isVisible": true
+        },
+        {
+            "displayName": "Ordered Total",
+            "column": "content.data.orderedTotal",
+            "datatype": "Number",
+            "isVisible": true
+        },
+        {
+            "displayName": "Inserted Total",
+            "column": "content.data.insertedTotal",
+            "datatype": "Number",
+            "isVisible": true
+        },
+        {
+            "displayName": "Recieved Total",
+            "column": "content.data.receivedTotal",
+            "datatype": "Number",
+            "isVisible": true
+        },
+        {
+            "displayName": "Credit Value",
+            "column": "content.data.creditValue",
+            "datatype": "Number",
+            "isVisible": false
+        },
+        {
+            "displayName": "Total Commissioned Amount",
+            "column": "content.data.totalCommissionedAmount",
+            "datatype": "Number",
+            "isVisible": false
+        },
+        {
+            "displayName": "Sort Code",
+            "column": "content.data.sortCode",
+            "datatype": "Text",
+            "format": "",
+            "isVisible": false
+        }
+	]
+},
+{
+    "name": "BoxMessages",
+	"id": "5e6e5f44-6d79-43ae-a5f5-d442ed095bac",
+    "displayName": "Box Messages",
+    "isVisible": true,
+    "fields": [
+        {
+            "displayName": "Id",
+            "column": "content.id",
+            "datatype": "Text",
+            "isVisible": true
+        },
+        {
+            "displayName": "Name",
+            "column": "content.name",
+            "datatype": "Text",
+            "isVisible": true
+        },
+        {
+            "displayName": "Description",
+            "column": "content.description",
+            "datatype": "Text",
+            "isVisible": true
+        },
+        {
+            "displayName": "Date",
+            "column": "content.contentAt",
+            "datatype": "dateTime",
+            "isVisible": true
+        },
+        {
+            "displayName": "Date UTC",
+            "column": "content.contentAtUtc",
+            "datatype": "dateTime",
+            "isVisible": true
+        },
+        {
+            "displayName": "quantity",
+            "column": "content.value.quantity",
+            "datatype": "Number",
+            "isVisible": false
+        },
+        {
+            "displayName": "Media Type",
+            "column": "content.value.mediaType",
+            "datatype": "Text",
+            "isVisible": false
+        },
+        {
+            "displayName": "Value",
+            "column": "content.value.value",
+            "datatype": "Number",
+            "isVisible": false
+        },
+        {
+            "displayName": "Total",
+            "column": "content.value.total",
+            "datatype": "Number",
+            "isVisible": false
+        },
+        {
+            "displayName": "Message Sequence",
+            "column": "content.vendorDependentFields.MESSAGE_SEQUENCE",
+            "datatype": "Number",
+            "isVisible": true
+        },
+        {
+            "displayName": "Line Number",
+            "column": "content.vendorDependentFields.LINE_NUMBER",
+            "datatype": "Number",
+            "isVisible": true
+        }
+    ]
+}
+]
